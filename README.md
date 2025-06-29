@@ -77,3 +77,6 @@ cat-dog-classifier/
 
 ## 📦 Model
 Aplikasi ini menggunakan pre-trained model `cat_dog_classifier.h5` yang berada di folder model/. Model ini sudah dilatih sebelumnya untuk klasifikasi gambar kucing dan anjing.
+
+## Demo
+https://denatajp.github.io/cat-dog-classifier - Demo aplikasi tanpa backend (UI only)
