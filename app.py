@@ -7,7 +7,7 @@ from PIL import Image
 
 app = Flask(__name__)
 
-# Konfigurasi
+# konfigurasi
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 MODEL_PATH = 'model/cat_dog_classifier.h5'
@@ -15,7 +15,7 @@ MODEL_PATH = 'model/cat_dog_classifier.h5'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB
 
-# Load model saat aplikasi dimulai
+# load model 
 model = tf.keras.models.load_model(MODEL_PATH)
 print("Model berhasil dimuat!")
 
@@ -41,7 +41,7 @@ def predict_image(img_path):
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-        # Cek jika ada file yang diupload
+        # Cek ada file yang diupload tidak
         if 'file' not in request.files:
             return redirect(request.url)
         
@@ -51,12 +51,12 @@ def upload_file():
             return redirect(request.url)
         
         if file and allowed_file(file.filename):
-            # Simpan file
+            # save file sementara
             filename = secure_filename(file.filename)
             save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(save_path)
             
-            # Lakukan prediksi
+            # Prediksi gambar
             label, confidence = predict_image(save_path)
             
             return render_template('index.html', 
@@ -66,7 +66,7 @@ def upload_file():
     
     return render_template('index.html')
 
-# Endpoint baru untuk prediksi AJAX
+# route baru buat prediksi via API
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
@@ -78,15 +78,15 @@ def predict():
         return jsonify({'error': 'No selected file'}), 400
         
     if file and allowed_file(file.filename):
-        # Simpan file sementara
+        # simpan file sementara
         filename = secure_filename(file.filename)
         temp_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(temp_path)
         
-        # Lakukan prediksi
+        # prediksi gambar
         label, confidence = predict_image(temp_path)
         
-        # Hapus file setelah prediksi
+        # hapus file sementara
         os.remove(temp_path)
         
         print(confidence)
