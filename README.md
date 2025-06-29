@@ -1,31 +1,22 @@
 # Cat vs Dog Classifier - Aplikasi Klasifikasi Gambar dengan AI
 
-
-## 📝 Deskripsi Proyek
 Aplikasi web berbasis AI yang dapat mengklasifikasikan gambar antara kucing dan anjing dengan akurasi tinggi. Dibangun menggunakan Flask untuk backend dan TensorFlow untuk model machine learning, dengan UI yang modern dan responsif.
 
 ![image](https://github.com/user-attachments/assets/29aa6014-622e-4a47-bdf0-a2e623942e90)
 
-## ✨ Fitur Utama
-- Real-time Classification: Membedakan gambar kucing dan anjing dengan cepat
-- UI Modern: Desain responsif yang bekerja di semua device
-- Visualisasi Hasil: Menampilkan tingkat confidence dengan grafik yang interaktif
-- Drag & Drop Upload: Upload gambar mudah dengan drag and drop
-
-## 🛠️ Apa Yang Digunakan?
+## Detail
 - Frontend: HTML5, CSS3, JavaScript
 - Backend: Python, Flask
 - Machine Learning: TensorFlow, Keras
 - Libraries: Pillow, NumPy, Werkzeug
 
-## 🚀 Panduan Instalasi
-
-### Requirements
+## Instalation
+Requirements
 - Python 3.8 atau lebih baru
 - pip (Python package manager)
 - virtualenv (direkomendasikan)
 
-### Instalasi
+Instalasi
 - Clone repository
     ``` bash
     git clone https://github.com/denatajp/cat-dog-classifier.git
@@ -66,7 +57,7 @@ cat-dog-classifier/
 └── README.md                   # Dokumentasi
 ```
 
-## 🤖 Cara Menggunakan
+## Cara Pakai
 1. Upload gambar kucing atau anjing dengan:
     - Klik tombol "Pilih File"
     - Atau drag and drop gambar ke area yang disediakan
