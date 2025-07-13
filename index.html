@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat vs Dog Classifier | AI-Powered Detection</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #4361ee;
@@ -394,6 +396,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -404,6 +407,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -413,9 +417,11 @@
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.05);
             }
+
             100% {
                 transform: scale(1);
             }
@@ -430,19 +436,19 @@
             .app-container {
                 flex-direction: column;
             }
-            
+
             h1 {
                 font-size: 2.2rem;
             }
-            
+
             .subtitle {
                 font-size: 1rem;
             }
-            
+
             .section-title {
                 font-size: 1.3rem;
             }
-            
+
             .prediction-label {
                 font-size: 1.8rem;
             }
@@ -452,33 +458,37 @@
             header {
                 padding: 20px 10px;
             }
-            
+
             h1 {
                 font-size: 1.8rem;
             }
-            
-            .upload-section, .result-section {
+
+            .upload-section,
+            .result-section {
                 padding: 20px;
             }
-            
+
             .upload-icon {
                 font-size: 3rem;
             }
-            
+
             .upload-text h3 {
                 font-size: 1.2rem;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <div class="logo">
                 <i class="fas fa-paw"></i>
             </div>
-            <h1>AI Cat vs Dog Classifier <DEMO> </h1>
-            <p class="subtitle">Upload gambar kucing atau anjing, dan sistem AI kami akan mengenalinya dengan akurasi tinggi dalam hitungan detik</p>
+            <h1>AI Cat vs Dog Classifier <DEMO>
+            </h1>
+            <p class="subtitle">Upload gambar kucing atau anjing, dan sistem AI kami akan mengenalinya dengan akurasi
+                tinggi dalam hitungan detik</p>
         </header>
 
         <div class="app-container">
@@ -487,7 +497,7 @@
                     <i class="fas fa-cloud-upload-alt"></i>
                     Upload Gambar
                 </h2>
-                
+
                 <div class="upload-area" id="uploadArea">
                     <div class="upload-icon">
                         <i class="fas fa-file-image pulse"></i>
@@ -502,7 +512,7 @@
                         <div id="fileName"></div>
                     </div>
                 </div>
-                
+
                 <button class="btn-submit" id="submitBtn" disabled>
                     <i class="fas fa-robot"></i> Mulai Klasifikasi
                 </button>
@@ -513,18 +523,18 @@
                     <i class="fas fa-chart-line"></i>
                     Hasil Prediksi
                 </h2>
-                
+
                 <div class="result-content">
                     <div class="result-placeholder" id="resultPlaceholder">
                         <i class="fas fa-search" style="font-size: 4rem; color: #e9ecef; margin-bottom: 20px;"></i>
                         <p>Upload gambar untuk melihat hasil klasifikasi</p>
                     </div>
-                    
+
                     <img src="" class="uploaded-image" id="uploadedImage" alt="Gambar yang diupload">
-                    
+
                     <div class="prediction-result" id="predictionResult">
                         <div class="prediction-label" id="predictionLabel">Kucing</div>
-                        
+
                         <div class="confidence-container">
                             <div class="confidence-text">
                                 Tingkat Keyakinan: <span id="confidenceValue">92.45</span>%
@@ -534,7 +544,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <button class="try-again" id="tryAgainBtn">
                         <i class="fas fa-redo"></i> Coba Gambar Lain
                     </button>
@@ -547,7 +557,7 @@
                 <h2>Mengapa Memilih AI Classifier Kami?</h2>
                 <p>Teknologi mutakhir untuk klasifikasi gambar yang akurat</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -556,7 +566,7 @@
                     <h3 class="feature-title">Model AI Terlatih</h3>
                     <p class="feature-desc">Dilatih dengan ribuan gambar untuk akurasi maksimal</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
@@ -564,7 +574,7 @@
                     <h3 class="feature-title">Proses Cepat</h3>
                     <p class="feature-desc">Analisis gambar dalam hitungan detik</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
@@ -572,7 +582,7 @@
                     <h3 class="feature-title">Responsif</h3>
                     <p class="feature-desc">Berfungsi sempurna di semua perangkat</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
@@ -582,14 +592,21 @@
                 </div>
             </div>
         </div>
-        
+
         <footer>
-            <p>&copy; 2023 AI Cat vs Dog Classifier | Dibuat dengan <i class="fas fa-heart" style="color: #f72585;"></i> dan TensorFlow</p>
+            <p>&copy; 2025 AI Cat vs Dog Classifier | Dibuat dengan <i class="fas fa-heart" style="color: #f72585;"></i>
+                dan TensorFlow</p>
+            <p style="margin-top: 15px;">
+                <a href="https://github.com/denatajp/cat-dog-classifier" target="_blank"
+                    style="color: var(--success); text-decoration: none;">
+                    <i class="fab fa-github"></i> GitHub Repository
+                </a>
+            </p>
         </footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const fileInput = document.getElementById('fileInput');
             const browseBtn = document.getElementById('browseBtn');
             const uploadArea = document.getElementById('uploadArea');
@@ -602,74 +619,74 @@
             const confidenceValue = document.getElementById('confidenceValue');
             const confidenceFill = document.getElementById('confidenceFill');
             const tryAgainBtn = document.getElementById('tryAgainBtn');
-            
+
             // Event listeners for file selection
             browseBtn.addEventListener('click', () => fileInput.click());
-            
-            
-            
+
+
+
             uploadArea.addEventListener('dragover', (e) => {
                 e.preventDefault();
                 uploadArea.style.borderColor = '#4361ee';
                 uploadArea.style.backgroundColor = '#e9f0ff';
             });
-            
+
             uploadArea.addEventListener('dragleave', () => {
                 uploadArea.style.borderColor = '#e9ecef';
                 uploadArea.style.backgroundColor = '#f8f9fa';
             });
-            
+
             uploadArea.addEventListener('drop', (e) => {
                 e.preventDefault();
                 uploadArea.style.borderColor = '#e9ecef';
                 uploadArea.style.backgroundColor = '#f8f9fa';
-                
+
                 if (e.dataTransfer.files.length) {
                     handleFile(e.dataTransfer.files[0]);
                 }
             });
-            
+
             fileInput.addEventListener('change', (e) => {
                 if (e.target.files.length) {
                     handleFile(e.target.files[0]);
                 }
             });
-            
+
             submitBtn.addEventListener('click', processImage);
             tryAgainBtn.addEventListener('click', resetForm);
-            
+
             function handleFile(file) {
                 // Check if file is an image
                 if (!file.type.match('image.*')) {
                     alert('Silakan pilih file gambar (JPG, JPEG, PNG)');
                     return;
                 }
-                
+
                 // Check file size (max 5MB)
                 if (file.size > 5 * 1024 * 1024) {
                     alert('Ukuran file terlalu besar. Maksimal 5MB');
                     return;
                 }
-                
+
                 // Display file name
                 fileName.textContent = file.name;
-                
+
                 // Preview image
                 const reader = new FileReader();
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     uploadedImage.src = e.target.result;
                 }
                 reader.readAsDataURL(file);
-                
+
                 // Enable submit button
                 submitBtn.disabled = false;
             }
-            
+
             function processImage() {
                 // Show loading state
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
                 submitBtn.disabled = true;
-                
+
                 // Simulate AI processing (in a real app, this would be an API call)
                 setTimeout(() => {
                     // Hide placeholder and show result
@@ -677,30 +694,30 @@
                     uploadedImage.style.display = 'block';
                     predictionResult.style.display = 'block';
                     tryAgainBtn.style.display = 'block';
-                    
+
                     // Random result for demo
                     const isCat = Math.random() > 0.5;
                     const confidence = (Math.random() * 30 + 70).toFixed(2);
-                    
+
                     // Update UI
                     predictionLabel.textContent = isCat ? 'KUCING' : 'ANJING';
                     predictionLabel.className = 'prediction-label ' + (isCat ? 'cat' : 'dog');
-                    
+
                     confidenceValue.textContent = confidence;
                     confidenceFill.textContent = confidence + '%';
                     confidenceFill.className = 'confidence-fill ' + (isCat ? 'cat-fill' : 'dog-fill');
                     confidenceFill.style.width = '0%';
-                    
+
                     // Animate confidence bar
                     setTimeout(() => {
                         confidenceFill.style.width = confidence + '%';
                     }, 100);
-                    
+
                     // Reset submit button
                     submitBtn.innerHTML = '<i class="fas fa-robot"></i> Mulai Klasifikasi';
                 }, 2000);
             }
-            
+
             function resetForm() {
                 fileInput.value = '';
                 fileName.textContent = '';
@@ -714,4 +731,5 @@
         });
     </script>
 </body>
+
 </html>
